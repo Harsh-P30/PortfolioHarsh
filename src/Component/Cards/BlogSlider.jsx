@@ -7,6 +7,7 @@ import blog2 from '../../assets/blog2.jpg';
 import blog3 from '../../assets/blog3.jpg';
 import blog4 from '../../assets/blog4.webp';
 import blog5 from '../../assets/blog5.png';
+import blog6 from '../../assets/blog6.jpg';
 
 const blogs = [
   
@@ -41,6 +42,13 @@ const blogs = [
     title: "React Hooks",
     description: "What Are React Hooks? A Beginner-Friendly Guide with Examples.",
     link :" https://dev.to/harsh_p30/what-are-react-hooks-a-beginner-friendly-guide-with-examples-1c3g"
+
+  },
+  {
+    img: blog6,
+    title: "CDN: The Shortcut to a Faster Website",
+    description: "Ever wonder why some websites feel instant while yours takes ages to load? The secret weapon is often a CDN—a Content Delivery Network.",
+    link :" https://dev.to/harsh_p30/cdn-the-shortcut-to-a-faster-website-1bal"
 
   },
 ];
