@@ -2,6 +2,8 @@ import React from 'react'
 import { SiRefinedgithub, SiLeetcode } from "react-icons/si";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import { TbFileCv } from "react-icons/tb";
+
 
 function Footer() {
   return (
@@ -44,6 +46,21 @@ function Footer() {
           <FaLinkedinIn />
           <p className="font-fira text-sm italic">LinkedIn</p>
         </a>
+
+        <a
+          href="https://drive.google.com/file/d/1qO166YUudik-2Erv-B6W8_FAJMs2RBqi/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="resume"
+          className="flex items-center gap-2 text-xl p-2 px-4 rounded-full border border-gray hover:text-gray transition"
+        >
+          <TbFileCv />
+          <p className="font-fira text-sm italic">Resume</p>
+        </a>
+
+
+
+
 
         {/* Group 2: Gmail & Instagram */}
         <div className="flex flex-wrap justify-center gap-4">
