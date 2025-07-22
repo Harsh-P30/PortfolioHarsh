@@ -8,6 +8,7 @@ import blog3 from '../../assets/blog3.jpg';
 import blog4 from '../../assets/blog4.webp';
 import blog5 from '../../assets/blog5.png';
 import blog6 from '../../assets/blog6.jpg';
+import blog7 from '../../assets/blog7.jpg';
 
 const blogs = [
   
@@ -49,6 +50,13 @@ const blogs = [
     title: "CDN: The Shortcut to a Faster Website",
     description: "Ever wonder why some websites feel instant while yours takes ages to load? The secret weapon is often a CDN—a Content Delivery Network.",
     link :" https://dev.to/harsh_p30/cdn-the-shortcut-to-a-faster-website-1bal"
+
+  },
+  {
+    img: blog7,
+    title: "Two Dev talk on Bundlers",
+    description: "A Funny Chat About Bundlers.",
+    link :" https://dev.to/harsh_p30/a-funny-chat-about-bundlers-8ki"
 
   },
 ];
