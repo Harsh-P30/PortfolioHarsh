@@ -54,7 +54,7 @@ const blogs = [
   },
   {
     img: blog7,
-    title: "Two Dev talk on Bundlers",
+    title: "In Bundler that much interesting.",
     description: "A Funny Chat About Bundlers.",
     link :" https://dev.to/harsh_p30/a-funny-chat-about-bundlers-8ki"
 
