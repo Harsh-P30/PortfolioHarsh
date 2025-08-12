@@ -19,7 +19,7 @@ function Projects() {
 
 
       <div className='p-16 lg:px-28'>
-        <h1 className='text-white font-fira text-sm sm:text-2xl text-center sm:relative right-32 pb-8' >.../Projects...</h1>
+        <h1 className='text-white font-fira text-sm sm:text-base  sm:relative right-32 pb-8' >.../Projects...</h1>
 
 
         <div id='tbpc' className=' gap-6 text-white text-xs sm:text-base md:flex w-full'>
