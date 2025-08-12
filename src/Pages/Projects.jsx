@@ -89,7 +89,7 @@ function Projects() {
           <div id="left" className='md:flex items-start gap-6'>
 
             <div className='h-2/3'>
-              <img src={metromastiiMobi} alt="" className='h-3/2' />
+              <img src={metromastiiMobi} loading='lazy' alt="" className='h-3/2 ' />
             </div>
 
             <div className='h-2/3'>
@@ -102,7 +102,7 @@ function Projects() {
                   </p></a>
               </div>
 
-              <img src={metromastiiDesk} alt="" className='h-full' />
+              <img src={metromastiiDesk} loading='lazy' alt="" className='h-full' />
 
               <div className='flex sm:justify-end'>
                 <a target='_blank' href="https://metro-masti.vercel.app/#" className='flex px-2 py-4 items-center gap-2'>
@@ -136,7 +136,7 @@ function Projects() {
           <div id="right" className='md:flex items-start gap-6'>
 
             <div className='h-2/3'>
-              <img src={ecommerceMobi} alt="" className='h-3/2' />
+              <img src={ecommerceMobi} loading='lazy' alt="" className='h-3/2' />
             </div>
 
             <div className='h-2/3'>
@@ -149,7 +149,7 @@ function Projects() {
                   </p></a>
               </div>
 
-              <img src={ecommerceDesk} alt="" className='h-full' />
+              <img src={ecommerceDesk} loading='lazy' alt="" className='h-full' />
 
               <div className='flex sm:justify-end'>
                 <a target='_blank' href="https://e-commerce-pearl-ten-46.vercel.app/" className='flex px-2 py-4 items-center gap-2'>
