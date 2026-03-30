@@ -37,6 +37,11 @@ function Header() {
             <NavLink to="/#about" className={getLinkClass(isAboutActive)}>About</NavLink>
           </li>
 
+          {/* Experience */}
+          <li className="font-semibold list-none">
+            <NavLink to="/experience" className={({ isActive }) => getLinkClass(isActive)}>Experience</NavLink>
+          </li>
+
           {/* Other Routes */}
           {['projects', 'getInTouch'].map((route) => (
             <li key={route} className="font-semibold list-none">

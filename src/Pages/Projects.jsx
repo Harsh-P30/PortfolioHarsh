@@ -35,7 +35,6 @@ function Projects() {
               <LangCard name='shadcn-ui' />
               <LangCard name='Vite' />
               <LangCard name='npm' />
-
             </div>
           </div>
 

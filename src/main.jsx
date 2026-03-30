@@ -7,6 +7,8 @@ import Home from './Pages/Home.jsx'
 import About from './Pages/About.jsx'
 import GetInTouch from './Pages/GetInTouch.jsx'
 import Projects from './Pages/Projects.jsx'
+import Admin from './Pages/Admin.jsx'
+import Experience from './Pages/Experience.jsx'
 
 
 
@@ -26,12 +28,20 @@ const router = createBrowserRouter(
           element: <About />
         },
         {
+          path: '/experience',
+          element: <Experience />
+        },
+        {
           path: '/getInTouch',
           element: <GetInTouch />
         },
         {
           path: '/projects',
           element: <Projects />
+        },
+        {
+          path: '/admin',
+          element: <Admin />
         },
       ]
     }
