@@ -111,7 +111,7 @@ function Home() {
               </p>
             </div>
             
-            <div className='flex flex-col align-items-center justify-center'>
+            <div className='flex flex-row align-items-center justify-center sm:flex-col gap-10 sm:gap-0'>
               <div className='flex flex-col '>
                 <a href="https://github.com/Harsh-P30" target='_blank' rel="noopener noreferrer">
                   <div className='flex items-center gap-2 text-xl text-white p-4 rounded-full border border-gray'>
@@ -123,7 +123,7 @@ function Home() {
                 </a>
               </div>
 
-              <div className='flex flex-col h-6'>
+              <div className='flex flex-col h-9'>
                 <a href="https://dev.to/harsh_p30" target='_blank' rel="noopener noreferrer">
                   <div className='flex items-center gap-2 text-xl text-white p-4 rounded-full border border-gray'>
                     <FaDev />
