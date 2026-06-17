@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router';
 import { useEffect } from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { SiRefinedgithub } from "react-icons/si";
+import { FaDev } from "react-icons/fa";
 import meImg from '../assets/me.jpg';
 import BlogSlider from '../Component/Cards/BlogSlider';
 
@@ -31,7 +32,7 @@ function Home() {
       {/* Top Title + Projects */}
       <div className='text-white flex flex-col lg:flex-row items-center justify-between gap-6'>
         <h1 className='font-fira text-5xl sm:text-6xl md:text-9xl font-bold tracking-wide text-center md:text-left'>
-          Frontend
+          Software
         </h1>
 
         <li className='list-none'>
@@ -53,7 +54,7 @@ function Home() {
           and <span className='italic text-white'>understandable code</span> to make development enjoyable.
         </p>
         <h1 className='font-fira text-5xl sm:text-6xl md:text-9xl font-bold tracking-wide'>
-          Developer
+          Engineer
         </h1>
       </div>
 
@@ -73,10 +74,10 @@ function Home() {
       <div className='text-white my-16 flex sm:text-base'>
         <div id="about" className='xl:flex items-center'>
           <p className='text-white font-fira py-16 text-sm sm:text-base'>.../About me...</p>
-          <p className='text-gray mt-4 xl:relative top-14 left-11/12'>
+          <p className='text-gray mt-4 xl:relative top-14 left-8/12'>
             I am
-            <span className='text-lg'> Harsh.</span>  A <span className='text-white italic'>Frontend Developer.</span><br />
-            I'm passionate about delivering the <span className='text-white italic'>best design and development solutions.</span>
+            <span className='text-lg'> Harsh Prasad.</span>  A <span className='text-white italic'>Software Engineer</span><br />
+            passionate about building <span className='text-white italic'>next-generation</span> web applications, <span className='text-white italic'>AI-driven</span> solutions,<br/> <span className='text-white'>and enterprise software.</span> <br /> I combine modern development practices with emerging technologies to create scalable, intelligent,<br/> and future-ready digital products.
           </p>
         </div>
       </div>
@@ -87,48 +88,71 @@ function Home() {
         {/* Left - Skills */}
         <div className='w-full flex flex-col gap-6'>
 
-          {/* Frontend Box */}
+          {/* Software Box */}
           <div className='px-6 py-6 border bg-white text-black rounded-3xl'>
-            <h1 className='font-fira text-xl'>Frontend</h1>
+            <h1 className='font-fira text-lg'>Frontend</h1>
             <p className='font-fira text-gray-600 text-sm'>
-              JavaScript / React / Redux Toolkit / HTML5<br />
-              DOM / Responsive Design
+              JavaScript (ES6+) / React / Redux Toolkit / HTML5<br />
+              DOM / Responsive Design / CSS3 / TailwindCSS / BootStrap / Material UI / SCSS / SASS / SPA
             </p>
           </div>
 
-          {/* Styles + GitHub */}
-          <div className='flex flex-col sm:flex-row gap-6 items-start'>
+          {/* backend + GitHub */}
+          <div className='flex flex-col sm:flex-row gap-6 items-start align-content-center justify-center'>
 
             <div className='border rounded-3xl px-6 py-6 w-full'>
-              <h1 className='font-fira text-xl'>Styles</h1>
+              <h1 className='font-fira text-lg'>Backend </h1>
               <p className='font-fira text-gray-400 text-sm'>
-                CSS3 / TailwindCSS / BootStrap / Material UI<br />
-                SCSS / SASS / SPA
+                Python / Django / Django REST Framework / REST APIs / Authentication & Authorization / JWT Authentication /
+                Role-Based Access Control (RBAC) / Logging & Monitoring / Testing & Debugging / Business Workflow Automation
+                <br />
+                <span className='bg-white text-black px-2'>Databases</span><br />
+                <span className='bg-white text-black px-2'>Database Management / PostgreSQL / MySQL / SQLite / MongoDB</span>
               </p>
             </div>
+            
+            <div className='flex flex-col align-items-center justify-center'>
+              <div className='flex flex-col '>
+                <a href="https://github.com/Harsh-P30" target='_blank' rel="noopener noreferrer">
+                  <div className='flex items-center gap-2 text-xl text-white p-4 rounded-full border border-gray'>
+                    <SiRefinedgithub />
+                  </div>
+                  <div className='flex items-center gap-2 text-xl text-black bg-white -rotate-45 font-thin p-4 rounded-full border border-gray relative -top-13 left-8 hover:rotate-0'>
+                    <FaArrowRightLong />
+                  </div>
+                </a>
+              </div>
 
-            <div className='flex flex-col items-start'>
-              <a href="https://github.com/Harsh-P30" target='_blank' rel="noopener noreferrer">
-                <div className='flex items-center gap-2 text-xl text-white p-4 rounded-full border border-gray'>
-                  <SiRefinedgithub />
-                </div>
-                <div className='flex items-center gap-2 text-xl text-black bg-white -rotate-45 font-thin p-4 rounded-full border border-gray relative -top-13 left-8 hover:rotate-0'>
-                  <FaArrowRightLong />
-                </div>
-              </a>
+              <div className='flex flex-col h-6'>
+                <a href="https://dev.to/harsh_p30" target='_blank' rel="noopener noreferrer">
+                  <div className='flex items-center gap-2 text-xl text-white p-4 rounded-full border border-gray'>
+                    <FaDev />
+                  </div>
+                  <div className='flex items-center gap-2 text-xl text-black bg-white -rotate-45 font-thin p-4 rounded-full border border-gray relative -top-13 left-8 hover:rotate-0'>
+                    <FaArrowRightLong />
+                  </div>
+                </a>
+              </div>
             </div>
+          </div>
+
+          {/* Emerging Technologies Box */}
+          <div className='border rounded-3xl px-6 py-6'>
+            <h1 className='font-fira text-lg'>Emerging Technologies</h1>
+            <p className='font-fira text-gray-400 text-sm'>
+              AI Chatbot Development / Retrieval-Augmented Generation (RAG) / Semantic Search / LLM Integrations / Prompt Engineering
+            </p>
           </div>
 
           {/* Other Box */}
           <div className='border rounded-3xl px-6 py-6'>
-            <h1 className='font-fira text-xl'>Other</h1>
+            <h1 className='font-fira text-lg'>Other</h1>
             <p className='font-fira text-gray-400 text-sm'>
               <span className='bg-white text-black px-2'>Programming Language</span><br />
               <span className='bg-white text-black px-2'>C / Cpp / JavaScript / Python</span>
               <br />
-              Data Structures / OOP / Version Control / Operating Systems / DBMS<br />
-              Git / GitHub / VS Code / Vercel / Netlify / Figma / Webpack / Babel<br />
-              Vite / JSON / REST APIs
+              Data Structures / OOP / Version Control / Operating Systems / DBMS /
+              Git / GitHub / VS Code / Vercel / Netlify / Figma / Webpack / Babel / Vite / JSON / REST APIs
             </p>
           </div>
 
@@ -136,7 +160,7 @@ function Home() {
 
         {/* Right - Image */}
         <div
-          className="w-full lg:w-1/2 bg-cover bg-center bg-no-repeat scale-100 h-80 md:h-[500px] rounded-2xl"
+          className="w-full lg:w-1/2 bg-cover bg-center bg-no-repeat scale-100 h-80 md:h-[600px] rounded-2xl"
           style={{ backgroundImage: `url(${meImg})` }}
         ></div>
       </div>
@@ -157,7 +181,7 @@ function Home() {
             <p>Manav Rachna International Institute of Research and Studies</p>
             <p>2021-25</p>
           </div>
-          <p>CGPA 7.045</p>
+          <p>CGPA 6.90</p>
         </div>
 
         {/* Higher Secondary */}
