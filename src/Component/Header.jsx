@@ -70,7 +70,7 @@ function Header() {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden mt-4 space-y-4">
-          {['projects', 'about', 'getInTouch'].map((route) => {
+          {['projects', 'about', 'experience', 'getInTouch'].map((route) => {
             const to = route === 'about' ? '/#about' : `/${route}`;
             const isActive = route === 'about' ? isAboutActive : location.pathname === `/${route}`;
 
