@@ -9,6 +9,7 @@ import blog4 from '../../assets/blog4.webp';
 import blog5 from '../../assets/blog5.png';
 import blog6 from '../../assets/blog6.jpg';
 import blog7 from '../../assets/blog7.jpg';
+import blog8 from '../../assets/mtvDemon.png';
 
 const blogs = [
   
@@ -57,6 +58,13 @@ const blogs = [
     title: "In Bundler that much interesting.",
     description: "A Funny Chat About Bundlers.",
     link :" https://dev.to/harsh_p30/a-funny-chat-about-bundlers-8ki"
+
+  },
+  {
+    img: blog8,
+    title: "MTV Architecture Django",
+    description: "MTV Architecture in Django: A Beginner-Friendly Guide to Building Web Applications.",
+    link :"https://dev.to/harsh_p30/django-mvt-architecture-4nbh"
 
   },
 ];
