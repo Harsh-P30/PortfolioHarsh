@@ -71,13 +71,38 @@ function Home() {
 
 
       {/* About Me */}
-      <div className='text-white my-16 flex sm:text-base'>
+      {/* <div className='text-white my-16 flex sm:text-base'>
         <div id="about" className='xl:flex items-center'>
           <p className='text-white font-fira py-16 text-sm sm:text-base'>.../About me...</p>
           <p className='text-gray mt-4 xl:relative top-14 left-8/12'>
             I am
             <span className='text-lg'> Harsh Prasad.</span>  A <span className='text-white italic'>Software Engineer</span><br />
-            passionate about building <span className='text-white italic'>next-generation</span> web applications, <span className='text-white italic'>AI-driven</span> solutions,<br/> <span className='text-white'>and enterprise software.</span> <br /> I combine modern development practices with emerging technologies to create scalable, intelligent,<br/> and future-ready digital products.
+            passionate about building <span className='text-white italic'>next-generation</span> 
+            web applications, <span className='text-white italic'>AI-driven</span> 
+            solutions,<br/> <span className='text-white'>and enterprise software.</span> 
+            <br /> I combine modern development practices with emerging technologies to create scalable,
+             intelligent,<br/> and future-ready digital products.
+          </p>
+        </div>
+      </div> */}
+
+      <div className='text-white my-16 flex flex-col sm:text-base '>
+        <div id="about" className='flex flex-col xl:flex-row items-center gap-8 justify-between'>
+          <p className='text-white font-fira py-16 text-sm sm:text-base'>
+            ...About me...
+          </p>
+          <p className='text-gray mt-4 xl:relative xl:top-14 xl:left-0 max-w-2xl text-center xl:text-right'>
+            I am
+            <span className='text-lg'> Harsh Prasad.</span> A{' '}
+            <span className='text-white italic'>Software Engineer</span>
+            <br />
+            passionate about building{' '}
+            <span className='text-white italic'>next-generation</span> web
+            applications, <span className='text-white italic'>AI-driven</span>{' '}
+            solutions,
+            <br /> <span className='text-white'>and enterprise software.</span>
+            <br /> I combine modern development practices with emerging
+            technologies to create scalable, intelligent, and future-ready digital products.
           </p>
         </div>
       </div>
