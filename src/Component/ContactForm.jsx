@@ -1,60 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
-  const [status, setStatus] = useState('');
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
 
   // Grab the key from env variables safely
-  const apiKey = import.meta.env.VITE_WEB3FORMS_KEY || process.env.REACT_APP_WEB3FORMS_KEY;
+  const apiKey =
+    import.meta.env.VITE_WEB3FORMS_KEY || process.env.REACT_APP_WEB3FORMS_KEY;
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('Sending...');
+    setStatus("Sending...");
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           access_key: apiKey,
-          subject: 'New message from portfolio',
+          subject: "New message from portfolio",
           ...formData,
         }),
       });
 
       const result = await response.json();
       if (result.success) {
-        setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', phone: '', message: '' }); // Clear form
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" }); // Clear form
       } else {
-        setStatus('Something went wrong. Please try again.');
+        setStatus("Something went wrong. Please try again.");
       }
     } catch (err) {
       console.error(err);
-      setStatus('Something went wrong. Please try again.');
+      setStatus("Something went wrong. Please try again.");
     }
   };
 
-  const statusClass = status.includes('success')
-    ? 'text-green-400'
-    : status.includes('Sending')
-    ? 'text-yellow-300'
-    : status
-    ? 'text-red-400'
-    : 'text-gray-400';
+  const statusClass = status.includes("success")
+    ? "text-green-400"
+    : status.includes("Sending")
+      ? "text-yellow-300"
+      : status
+        ? "text-red-400"
+        : "text-gray-400";
 
   return (
     <div className="max-w-xl mx-auto p-6 rounded-lg bg-black/40 border border-gray-700 shadow-lg">
       <h2 className="text-2xl font-semibold text-white mb-2">Contact Me</h2>
-      <p className="text-sm text-gray-300 mb-6">Have a project or just want to say hi? Send a message and I’ll reply soon.</p>
+      <p className="text-sm text-gray-300 mb-6">
+        Have a project or just want to say hi? Send a message and I’ll reply
+        soon.
+      </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="name" className="sr-only">Name</label>
+          <label htmlFor="name" className="sr-only">
+            Name
+          </label>
           <input
             id="name"
             name="name"
@@ -68,7 +80,9 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="sr-only">Email</label>
+          <label htmlFor="email" className="sr-only">
+            Email
+          </label>
           <input
             id="email"
             name="email"
@@ -82,7 +96,9 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="phone" className="sr-only">Phone</label>
+          <label htmlFor="phone" className="sr-only">
+            Phone
+          </label>
           <input
             id="phone"
             name="phone"
@@ -95,7 +111,9 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="message" className="sr-only">Message</label>
+          <label htmlFor="message" className="sr-only">
+            Message
+          </label>
           <textarea
             id="message"
             name="message"
@@ -111,19 +129,38 @@ export default function ContactForm() {
         <div className="flex items-center justify-between">
           <button
             type="submit"
-            disabled={status === 'Sending...'}
-            className="px-6 sm:px-10 bg-white italic font-fira text-black py-2 border rounded-full text-sm sm:text-base"
+            disabled={status === "Sending..."}
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-2 bg-white italic font-fira text-black border border-white rounded-full text-sm sm:text-base transition-colors duration-300 hover:bg-white/80 active:bg-white/70 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
-            {status === 'Sending...' && (
-              <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+            {status === "Sending..." && (
+              <svg
+                className="animate-spin h-4 w-4 text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                ></path>
               </svg>
             )}
-            <span>{status === 'Sending...' ? 'Sending...' : 'Send Message'}</span>
+            <span>
+              {status === "Sending..." ? "Sending..." : "Send Message"}
+            </span>
           </button>
 
-          <div className={`text-sm ${status ? statusClass : 'text-gray-400'}`}>
+          <div className={`text-sm ${status ? statusClass : "text-gray-400"}`}>
             {status && <p>{status}</p>}
           </div>
         </div>
